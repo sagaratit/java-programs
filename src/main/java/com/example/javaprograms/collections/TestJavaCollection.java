@@ -1,5 +1,9 @@
 package com.example.javaprograms.collections;
+import javax.swing.text.html.Option;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class TestJavaCollection{
     public static void main(String args[]){
 //Creating HashSet and adding elements
@@ -15,5 +19,20 @@ public class TestJavaCollection{
         while(itr.hasNext()){
             System.out.println(itr.next());
         }
+
+        Optional op = Optional.of("sagar");
+        System.out.println(op);
+
+        List<String> ls = Stream.of("sagar","yadav").map(String::toUpperCase).collect(Collectors.toList());
+        System.out.println(ls);
+        List<List<Integer>> ls1 = Arrays.asList(Arrays.asList(1,2),Arrays.asList(3,4));
+        System.out.println(ls1.stream().flatMap(Collection::stream).collect(Collectors.toList()));
+        ls.stream().forEach((s) -> System.out.println(s));
+
+        //sequential stream
+        List<String> st= Arrays.asList("sagar", "n","i","c","e");
+        st.stream().forEach(System.out::print);
+        System.out.println("test");
+        st.stream().parallel().forEachOrdered(System.out::print);
     }
 }
