@@ -1,5 +1,10 @@
 package com.example.javaprograms.sorting;
 
+import java.text.Collator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class QuickSort {
 
     public static void main(String[] args) {
@@ -11,6 +16,9 @@ public class QuickSort {
         quickSortM(arr);
         System.out.println();
         System.out.println("-- after quicksort array-- ");
+        Arrays.stream(arr).forEachOrdered(System.out::print);
+        Arrays.stream(arr).summaryStatistics();
+        System.out.println("");
         for(int i=0; i < arr.length ; i++) {
             System.out.print(arr[i]);
         }
