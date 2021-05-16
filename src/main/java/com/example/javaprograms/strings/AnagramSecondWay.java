@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class AnagramSecondWay {
     public static void main(String[] args) {
-        String a = "STOP";
-        String b = "spot";
+        String a = "Hello";
+        String b = "hello";
 
         char[] first = a.toLowerCase().toCharArray();
         char[] second = b.toLowerCase().toCharArray();
