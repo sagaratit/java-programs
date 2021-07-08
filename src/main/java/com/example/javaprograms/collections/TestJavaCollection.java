@@ -32,7 +32,20 @@ public class TestJavaCollection{
         //sequential stream
         List<String> st= Arrays.asList("sagar", "n","i","c","e");
         st.stream().forEach(System.out::print);
-        System.out.println("test");
+        System.out.println("sequential stream");
         st.stream().parallel().forEachOrdered(System.out::print);
+
+        System.out.println("-------------------------------");
+        List<String> list=new ArrayList<>();
+        list.add("Ravi");
+        list.add("Vijay");
+        list.add("Ravi");
+        list.add("Ajay");
+        list.add("Aman");
+        List upperCaseList = list.stream().map((a)-> a.equals("Ravi")? a.replace(a,"sagar"):a).collect(Collectors.toList());
+        List filterList = list.stream().filter((a) -> a.equals("Aman")).collect(Collectors.toList());
+        System.out.println(list);
+        System.out.println(upperCaseList);
+        System.out.println(filterList);
     }
 }

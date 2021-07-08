@@ -17,7 +17,6 @@ public class Anagrams {
         java.util.HashMap<Character, Integer> m1 = new HashMap<Character, Integer>();
         java.util.HashMap<Character, Integer> m2 = new HashMap<Character, Integer>();
         if (a.length() >= 1 && b.length() <= 50) {
-
             for (int i = 0; i < a.length(); i++) {
                 int cnt = 0;
                 for (int j = 0; j < b.length(); j++) {

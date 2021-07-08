@@ -1,6 +1,8 @@
 package com.example.javaprograms.strings;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
+
 /**
  * Get the String and number from the user
  * String to find pattern and as given count
@@ -38,5 +40,13 @@ public class SubstringComparison {
         int k = scan.nextInt();
         scan.close();
         System.out.println(getSmallestAndLargest(s, k));
+
+        String s2 = "smith";
+        if (Pattern.matches("[a-zA-Z]+",s2)) {
+            // Do something
+            System.out.println("Yes, string contains letters only");
+        }else{
+            System.out.println("Nope, Other characters detected");
+        }
     }
 }

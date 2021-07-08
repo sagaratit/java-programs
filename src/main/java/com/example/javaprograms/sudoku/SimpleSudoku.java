@@ -14,6 +14,12 @@ public class SimpleSudoku {
                 {3, 5, 7},
                 {8, 1, 6}
         };
+
+        int rows = sdk.length;
+        int cols = sdk[0].length;
+        System.out.println("row len => "+rows);
+        System.out.println("col len => "+cols);
+        System.out.println("col => "+sdk[0]);
         ArrayList ans = new ArrayList<Integer>();
         System.out.println(" -- Given Sudoku --");
         for (int i = 0; i < sdk.length; i++) {
@@ -63,9 +69,9 @@ public class SimpleSudoku {
         } else {
             System.out.println(" Below Sudoku is not valid");
         }
-        for (int i = 0; i < sdk.length; i++) {
+        for (int[] ints : sdk) {
             for (int j = 0; j < sdk.length; j++) {
-                System.out.print(sdk[i][j]);
+                System.out.print(ints[j]);
                 if (j != 2) {
                     System.out.print(",");
                 }
