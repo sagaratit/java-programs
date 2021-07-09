@@ -22,5 +22,12 @@ public class PredClass {
 
         list.stream().filter(p).forEach(System.out::println);
 
+        System.out.println(" ---  predicates using string lambda function --- ");
+        List<String> ls = new java.util.ArrayList<>(List.of("sagar", "yadav", "ashu", "abc"));
+        Predicate<String> strLen =  str -> (str.length() == 3);
+
+        //ls.stream().filter(strLen).forEach(System.out::println);
+        ls.removeIf(strLen);
+        System.out.println(ls);
     }
 }
